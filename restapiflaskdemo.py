@@ -3,7 +3,7 @@
 Created on Wed Jan 27 10:52:23 2021
 
 @author: VaishnaveeLake
-
+app.get()
 """
 import json
 from flask import Flask ,jsonify,request,Response,make_response
@@ -62,7 +62,7 @@ class ProductSchema(ModelSchema):
     price=fields.Number(required=True)
     imgUrl=fields.String(required=True)
 
-@app.route('/products',methods=['POST'])       
+@app.route('/ibm',methods=['POST'])       
 def createProduct():
     data= request.get_json()        #get json data
     product_schema =ProductSchema()
